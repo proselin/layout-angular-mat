@@ -4,11 +4,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutConfigService } from '../../core/config/layout-config.service';
 import { EventBusService } from '../../core/events/event-bus.service';
-import { DigitalClockComponent } from '../../shared/components/digital-clock/digital-clock.component';
 
 @Component({
   selector: 'app-header',
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, DigitalClockComponent],
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
