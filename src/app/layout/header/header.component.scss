@@ -1,0 +1,24 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--mat-sys-surface-container);
+  color: var(--mat-sys-on-surface);
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  gap: 8px;
+}
+
+.app-title {
+  font: var(--mat-sys-title-large);
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  app-digital-clock {
+    display: none;
+  }
+}

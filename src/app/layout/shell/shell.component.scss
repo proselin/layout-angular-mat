@@ -1,0 +1,26 @@
+.shell-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidenav-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-sidenav {
+  width: 280px;
+  background: var(--mat-sys-surface-container-low);
+}
+
+.sidenav-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .app-sidenav {
+    width: 260px;
+  }
+}

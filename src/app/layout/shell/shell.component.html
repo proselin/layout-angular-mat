@@ -1,0 +1,22 @@
+<div class="shell-container">
+  <app-header />
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #sidenav
+      [mode]="sidenavMode()"
+      [opened]="sidenavOpened()"
+      (openedChange)="sidenavOpened.set($event)"
+      class="app-sidenav"
+      [fixedInViewport]="isMobile()"
+      fixedTopGap="64"
+    >
+      <app-sidebar (navigated)="onNavigated()" />
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+      <app-message-panel />
+      <app-main-content />
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-footer />
+  <app-loading-screen />
+</div>

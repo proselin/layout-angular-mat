@@ -1,0 +1,10 @@
+@if (visible()) {
+  <div class="loading-overlay" @fadeInOut>
+    <div class="loading-content">
+      @if (config().showSpinner) {
+        <mat-spinner diameter="48"></mat-spinner>
+      }
+      <p class="loading-message">{{ message() }}</p>
+    </div>
+  </div>
+}

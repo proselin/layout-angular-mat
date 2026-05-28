@@ -1,0 +1,37 @@
+.sidebar-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 24px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-title {
+  font: var(--mat-sys-title-medium);
+  color: var(--mat-sys-on-surface);
+}
+
+.sidebar-subtitle {
+  font: var(--mat-sys-body-small);
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.nav-icon {
+  margin-right: 8px;
+}
+
+.nav-expansion {
+  box-shadow: none !important;
+  background: transparent;
+}
+
+.active-link {
+  background: var(--mat-sys-secondary-container) !important;
+  color: var(--mat-sys-on-secondary-container) !important;
+  border-radius: 28px;
+}

@@ -1,0 +1,46 @@
+<h1 class="page-title">Home</h1>
+
+<mat-card class="demo-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>World Clock</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-digital-clock />
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="demo-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Toast Examples</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="button-row">
+      <button mat-flat-button (click)="showToast('success')">Success Toast</button>
+      <button mat-flat-button color="warn" (click)="showToast('error')">Error Toast</button>
+      <button mat-stroked-button (click)="showToast('warning')">Warning Toast</button>
+      <button mat-stroked-button (click)="showToast('info')">Info Toast</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="demo-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Message Panel Examples</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="button-row">
+      <button mat-flat-button (click)="showMessage('success')">Success Message</button>
+      <button mat-flat-button color="warn" (click)="showMessage('error')">Error Message</button>
+      <button mat-stroked-button (click)="showMessage('info')">Info Message</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="demo-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Loading Screen</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <button mat-flat-button (click)="showLoading()">Show Loading (2s)</button>
+  </mat-card-content>
+</mat-card>

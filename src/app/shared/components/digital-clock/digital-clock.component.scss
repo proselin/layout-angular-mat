@@ -1,0 +1,40 @@
+.clock-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.clock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container);
+  min-width: 100px;
+}
+
+.clock-label {
+  font: var(--mat-sys-label-small);
+  color: var(--mat-sys-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.clock-time {
+  font: var(--mat-sys-title-large);
+  color: var(--mat-sys-on-surface);
+  font-variant-numeric: tabular-nums;
+}
+
+.clock-date {
+  font: var(--mat-sys-body-small);
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.clock-offset {
+  font: var(--mat-sys-label-small);
+  color: var(--mat-sys-outline);
+}

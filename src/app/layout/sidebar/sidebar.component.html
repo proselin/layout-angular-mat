@@ -1,0 +1,40 @@
+<div class="sidebar-content">
+  <div class="sidebar-header">
+    <span class="sidebar-title">{{ configService.appTitle() }}</span>
+    <span class="sidebar-subtitle">{{ configService.appSubtitle() }}</span>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-nav-list>
+    @for (item of configService.menu(); track item.id) {
+      @if (item.children && item.children.length > 0) {
+        <mat-expansion-panel class="nav-expansion" [class.disabled]="item.disabled">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="nav-icon">{{ item.icon }}</mat-icon>
+              <span>{{ item.label }}</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          @for (child of item.children; track child.id) {
+            <a mat-list-item [routerLink]="child.route" routerLinkActive="active-link"
+               [disabled]="child.disabled ?? false" (click)="navigated.emit()">
+              <mat-icon matListItemIcon>{{ child.icon }}</mat-icon>
+              <span matListItemTitle>{{ child.label }}</span>
+            </a>
+          }
+        </mat-expansion-panel>
+      } @else {
+        <a mat-list-item [routerLink]="item.route" routerLinkActive="active-link"
+           [disabled]="item.disabled ?? false" (click)="navigated.emit()">
+          <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+          <span matListItemTitle>{{ item.label }}</span>
+          @if (item.badge) {
+            <span matListItemMeta [matBadge]="item.badge" matBadgeColor="primary"></span>
+          }
+        </a>
+      }
+      @if (item.dividerAfter) {
+        <mat-divider></mat-divider>
+      }
+    }
+  </mat-nav-list>
+</div>

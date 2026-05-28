@@ -1,0 +1,14 @@
+<div class="clock-container">
+  @for (clock of clocks(); track clock.config.id) {
+    <div class="clock-item">
+      <span class="clock-label">{{ clock.config.label }}</span>
+      <span class="clock-time">{{ clock.time }}</span>
+      @if (clock.config.showDate) {
+        <span class="clock-date">{{ clock.date }}</span>
+      }
+      @if (clock.config.showOffset) {
+        <span class="clock-offset">{{ clock.offset }}</span>
+      }
+    </div>
+  }
+</div>
