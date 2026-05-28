@@ -1,0 +1,16 @@
+.page-title {
+  font: var(--mat-sys-display-small);
+  color: var(--mat-sys-on-surface);
+  margin: 0 0 24px;
+}
+
+.demo-card {
+  margin-bottom: 16px;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}

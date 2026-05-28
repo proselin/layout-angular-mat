@@ -1,0 +1,18 @@
+@if (visible()) {
+  <div class="message-panel" [class]="'message-' + notification()!.type" @slideInOut>
+    <div class="message-content">
+      <mat-icon class="message-icon">{{ iconMap[notification()!.type] }}</mat-icon>
+      <div class="message-text">
+        @if (notification()!.title) {
+          <strong class="message-title">{{ notification()!.title }}</strong>
+        }
+        <span class="message-body">{{ notification()!.message }}</span>
+      </div>
+      @if (notification()!.dismissible !== false) {
+        <button mat-icon-button (click)="dismiss()" aria-label="Dismiss message">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </div>
+  </div>
+}
